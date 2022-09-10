@@ -46,3 +46,4 @@ alias sp="spotifyd --config-path ~/.config/spotifyd/spotifyd.conf --no-daemon"
 ## Linux/CLI
 #------------------------------------------------------------
 alias cat="bat"
+alias lg="lazygit"
