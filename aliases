@@ -26,10 +26,20 @@ alias a="./bin/app"
 alias pp="php -S localhost:8000 -t public/"
 alias cpda="composer dump-autoload"
 alias cpin="composer install"
+
+
+## Laravel
+#------------------------------------------------------------
 alias pa="php artisan"
 alias pas="pa serve"
 alias pam="pa migrate"
 alias pad="pa db:seed"
+
+
+## Symfony
+#------------------------------------------------------------
+alias sc="symfony console"
+alias scmm="symfony console make:migration"
 
 
 ## Ruby/Rails
