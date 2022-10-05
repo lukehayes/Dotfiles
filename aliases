@@ -2,38 +2,38 @@ source .config/luke-config/general-config
 
 ## General Movement
 #------------------------------------------------------------
-alias asd="cd"
-alias d="cd $HOME/Desktop"
-alias dv="cd $HOME/Dev"
+alias asd = "cd"
+alias d   = "cd $HOME/Desktop"
+alias dv  = "cd $HOME/Dev"
 
 
 ## Pacman/Yay
 #------------------------------------------------------------
-alias pps="pacman -Ss"
-alias sps="sudo pacman -S"
-alias ys="yay -Ss"
+alias pps = "pacman -Ss"
+alias sps = "sudo pacman -S"
+alias ys  = "yay -Ss"
 
 
 ## C/C++
 #------------------------------------------------------------
-alias m="make"
-alias mc="make clean"
-alias a="./bin/app"
+alias m  = "make"
+alias mc = "make clean"
+alias a  = "./bin/app"
 
 
 ## PHP/Composer
 #------------------------------------------------------------
-alias pp="php -S localhost:8000 -t public/"
-alias cpda="composer dump-autoload"
-alias cpin="composer install"
+alias pp   = "php -S localhost:8000 -t public/"
+alias cpda = "composer dump-autoload"
+alias cpin = "composer install"
 
 
 ## Laravel
 #------------------------------------------------------------
-alias pa="php artisan"
-alias pas="pa serve"
-alias pam="pa migrate"
-alias pad="pa db:seed"
+alias pa  = "php artisan"
+alias pas = "pa serve"
+alias pam = "pa migrate"
+alias pad = "pa db:seed"
 
 
 ## Symfony
@@ -47,16 +47,16 @@ alias scm  = "symfony console doctrine:database:migrate"
 
 ## Ruby/Rails
 #------------------------------------------------------------
-alias rs="rails server"
-alias rdm="rails db:migrate"
-alias rds="rails db:seed"
+alias rs  = "rails server"
+alias rdm = "rails db:migrate"
+alias rds = "rails db:seed"
 
 
 ## Spotify
 #------------------------------------------------------------
-alias sp="spotifyd --config-path ~/.config/spotifyd/spotifyd.conf --no-daemon"
+alias sp = "spotifyd --config-path ~/.config/spotifyd/spotifyd.conf --no-daemon"
 
 ## Linux/CLI
 #------------------------------------------------------------
-alias cat="bat"
-alias lg="lazygit"
+alias cat = "bat"
+alias lg  = "lazygit"
