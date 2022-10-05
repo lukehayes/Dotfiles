@@ -39,7 +39,8 @@ alias pad="pa db:seed"
 ## Symfony
 #------------------------------------------------------------
 alias sc="symfony console"
-alias scmm="symfony console make:migration"
+alias sst="symfony server:start"
+lias scmm="symfony console make:migration"
 
 
 ## Ruby/Rails
