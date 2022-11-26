@@ -27,4 +27,8 @@ SYMLINK_PATH=$HOME/.config/luke-symlinks/ZSH
 source $SYMLINK_PATH/aliases
 source $SYMLINK_PATH/variables
 
+# Swap the escape key with the capslock key.
+setxkbmap -option caps:swapescape # Swap capslock with ESC.
+setxkbmap -option caps:escape # Make capslock another ECS.
+
 ./.fehbg
