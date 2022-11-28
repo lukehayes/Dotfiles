@@ -20,9 +20,7 @@ source $ZSH/oh-my-zsh.sh
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
-#source $HOME/.config/luke-config/bashrc-aliases
-
-SYMLINK_PATH=$HOME/.config/luke-symlinks/ZSH
+SYMLINK_PATH=~/.config/dotfiles/ZSH
 
 source $SYMLINK_PATH/aliases
 source $SYMLINK_PATH/variables
