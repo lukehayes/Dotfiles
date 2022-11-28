@@ -1,5 +1,3 @@
-source .config/luke-config/general-config
-
 ## General Movement
 #------------------------------------------------------------
 alias asd="cd"
@@ -60,3 +58,4 @@ alias sp="spotifyd --config-path ~/.config/spotifyd/spotifyd.conf --no-daemon"
 #------------------------------------------------------------
 alias cat="bat"
 alias lg="lazygit"
+alias neofetch="neofetch --ascii_distro arch"
