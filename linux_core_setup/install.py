@@ -16,3 +16,9 @@ os.system("sudo cp pacman.conf /etc/")
 
 print("Updating System...")
 os.system("pacman -Su")
+
+print("Copying .Xresources file to $HOME ...")
+os.system("sudo cp .Xresources $HOME")
+
+print("Updating .Xresources file for correct screen sizing on 5k monitor...")
+os.system("xrdb -merge ~/.Xresources")
