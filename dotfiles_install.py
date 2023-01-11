@@ -90,7 +90,7 @@ def install_configs():
     clone_repo("git@github.com:lukehayes/AstroNvimConfig.git", nvim_dir_path)
     new_line()
 
-    # Fonts
+    # FONTS
     #
     create_dir(font_dir_path)
     copy_file("fonts/JetBrainsMono", font_dir_path)
@@ -112,12 +112,17 @@ def install_configs():
     create_symlink(dotfile_dir_path + "/sxhkd/sxhkdrc", sxhkd_config_path + "/sxhkdrc" )
     new_line()
 
-    # SXHKD
+    # POLYBAR
     #
     create_dir(polybar_config_path)
     copy_file(repo_config_path + "/polybar", dotfile_dir_path)
     create_symlink(dotfile_dir_path + "/polybar/config.ini", polybar_config_path + "/config.ini" )
     create_symlink(dotfile_dir_path + "/polybar/launch.sh",  polybar_config_path + "/launch.sh" )
+    new_line()
+
+    # WALLPAPERS
+    #
+    copy_file("wallpapers", dotfile_dir_path)
     new_line()
 
 def nuke_all_configs():
