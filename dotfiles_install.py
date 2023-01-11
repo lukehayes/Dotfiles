@@ -59,8 +59,8 @@ def install_configs():
     # ZSH
     #
     create_dir(zsh_dir_path)
-    copy_file(".zshrc", zsh_dir_path)
-    copy_file("aliases", zsh_dir_path)
+    copy_file(".zshrc",    zsh_dir_path)
+    copy_file("aliases",   zsh_dir_path)
     copy_file("variables", zsh_dir_path)
     create_symlink(zsh_dir_path + "/.zshrc", "$HOME/.zshrc")
     new_line()
@@ -89,7 +89,14 @@ def install_configs():
     #
     create_dir(font_dir_path)
     copy_file("fonts/JetBrainsMono", font_dir_path)
-    copy_file("fonts/ShareTech", font_dir_path)
+    copy_file("fonts/ShareTech",     font_dir_path)
+    new_line()
+
+    # BSPWM
+    #
+    copy_file("configs/bspwm",   config_dir_path)
+    copy_file("configs/sxhkd",   config_dir_path)
+    copy_file("configs/polybar", config_dir_path)
     new_line()
 
 def nuke_all_configs():
@@ -98,8 +105,11 @@ def nuke_all_configs():
         remove("/home/luke/.zshrc")
         remove("/home/luke/.vimrc")
         remove("/home/luke/.vim")
-        remove("/home/luke/.config/nvim")
         remove("/home/luke/.fonts")
+        remove("/home/luke/.config/nvim")
+        remove("/home/luke/.config/bspwm")
+        remove("/home/luke/.config/sxhkd")
+        remove("/home/luke/.config/polybar")
         print("All files removed.\n")
 
 def run_config():
