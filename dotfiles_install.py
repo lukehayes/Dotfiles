@@ -8,11 +8,16 @@ import os
 
 # Path variables
 #
-config_dir_path  = "$HOME/.config"
-dotfile_dir_path = config_dir_path  + "/dotfiles"
-avim_dir_path    = config_dir_path  + "/nvim"
-avim_user_path   = config_dir_path  + "/nvim/lua/user"
-font_dir_path    = "$HOME/.fonts"
+config_dir_path     = "$HOME/.config"
+dotfile_dir_path    = config_dir_path  + "/dotfiles"
+avim_dir_path       = config_dir_path  + "/nvim"
+avim_user_path      = config_dir_path  + "/nvim/lua/user"
+bspwm_config_path   = config_dir_path + "/bspwm"
+sxhkd_config_path   = config_dir_path + "/sxhkd"
+polybar_config_path = config_dir_path + "/polybar"
+font_dir_path       = "$HOME/.fonts"
+
+repo_config_path    = "configs"
 
 # Symlink paths
 #
@@ -94,9 +99,25 @@ def install_configs():
 
     # BSPWM
     #
-    copy_file("configs/bspwm",   config_dir_path)
-    copy_file("configs/sxhkd",   config_dir_path)
-    copy_file("configs/polybar", config_dir_path)
+    create_dir(bspwm_config_path)
+    copy_file(repo_config_path + "/bspwm", dotfile_dir_path)
+    create_symlink(dotfile_dir_path + "/bspwm/bspwmrc", bspwm_config_path + "/bspwmrc" )
+    create_symlink(dotfile_dir_path + "/bspwm/keybindings", bspwm_config_path + "/keybindings" )
+    new_line()
+    
+    # SXHKD
+    #
+    create_dir(sxhkd_config_path)
+    copy_file(repo_config_path + "/sxhkd", dotfile_dir_path)
+    create_symlink(dotfile_dir_path + "/sxhkd/sxhkdrc", sxhkd_config_path + "/sxhkdrc" )
+    new_line()
+
+    # SXHKD
+    #
+    create_dir(polybar_config_path)
+    copy_file(repo_config_path + "/polybar", dotfile_dir_path)
+    create_symlink(dotfile_dir_path + "/polybar/config.ini", polybar_config_path + "/config.ini" )
+    create_symlink(dotfile_dir_path + "/polybar/launch.sh",  polybar_config_path + "/launch.sh" )
     new_line()
 
 def nuke_all_configs():
