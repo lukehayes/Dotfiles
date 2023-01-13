@@ -100,6 +100,7 @@ def install_configs():
     # BSPWM
     #
     create_dir(bspwm_config_path)
+    create_dir(bspwm_config_path + "/scripts")
     copy_file(repo_config_path + "/bspwm", dotfile_dir_path)
     create_symlink(dotfile_dir_path + "/bspwm/bspwmrc", bspwm_config_path + "/bspwmrc" )
     create_symlink(dotfile_dir_path + "/bspwm/keybindings", bspwm_config_path + "/keybindings" )
