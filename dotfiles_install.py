@@ -103,6 +103,7 @@ def install_configs():
     copy_file(repo_config_path + "/bspwm", dotfile_dir_path)
     create_symlink(dotfile_dir_path + "/bspwm/bspwmrc", bspwm_config_path + "/bspwmrc" )
     create_symlink(dotfile_dir_path + "/bspwm/keybindings", bspwm_config_path + "/keybindings" )
+    create_symlink(dotfile_dir_path + "/bspwm/scripts/keybindings_rofi.sh", bspwm_config_path + "/scripts/keybindings_rofi.sh" )
     new_line()
     
     # SXHKD
@@ -125,6 +126,12 @@ def install_configs():
     copy_file("wallpapers", dotfile_dir_path)
     new_line()
 
+    # Rofi
+    #
+    folder = "/rofi"
+    # create_dir(config_dir_path + folder)
+    copy_file(repo_config_path + folder, config_dir_path)
+
 def nuke_all_configs():
         print("Nuking All Files...\n")
         remove("/home/luke/.config/dotfiles")
@@ -136,6 +143,7 @@ def nuke_all_configs():
         remove("/home/luke/.config/bspwm")
         remove("/home/luke/.config/sxhkd")
         remove("/home/luke/.config/polybar")
+        remove("/home/luke/.config/rofi")
         print("All files removed.\n")
 
 def run_config():
