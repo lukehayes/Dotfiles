@@ -29,4 +29,6 @@ source $SYMLINK_PATH/variables
 setxkbmap -option caps:swapescape # Swap capslock with ESC.
 setxkbmap -option caps:escape # Make capslock another ECS.
 
+#export LC_ALL="en_GB.UTF-8"
+#unset LANG && LANG="en_GB.utf8" && export LC_ALL="en_GB.UTF-8"
 ./.fehbg
