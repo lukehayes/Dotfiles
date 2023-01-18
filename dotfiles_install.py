@@ -133,6 +133,12 @@ def install_configs():
     # create_dir(config_dir_path + folder)
     copy_file(repo_config_path + folder, config_dir_path)
 
+    # ASEPRITE COLOR PALETTES
+    #
+    folder = "palettes"
+    # create_dir(config_dir_path + folder)
+    copy_file(folder, config_dir_path + "/aseprite")
+
 def nuke_all_configs():
         print("Nuking All Files...\n")
         remove("/home/luke/.config/dotfiles")
