@@ -1,15 +1,14 @@
+# Script that will look through all of the files in this folder and prepend
+# "lolspec-" to the original name of the file if it doesn't exist.
 import os
-root_dir = "."
-file_set = set()
 
-for dir_, _, files in os.walk(root_dir):
+for root, _, files in os.walk("."):
     for filename in files:
       if not filename.startswith('lolspec-'):
         os.system("mv {0} lolspec-{0}".format(filename))
       else:
         print("Ignoring {}".format(filename))
 
-        # os.system("echo {0} lolspec-{0}".format(file_name))
-
+# Revert these two files back to their original names.
 os.system("mv lolspec-default.ase default.ase")
 os.system("mv lolspec-rename.py rename.py")
