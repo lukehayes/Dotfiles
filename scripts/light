@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+# Script that simply changes the brightness value on my iMac 27 5k as I can't get the buttons to work
+# or any 'light' packages from Pacman or the AUR.
+
+file="/sys/class/backlight/acpi_video0/brightness"
+
+# $1 gets the value from argv[1]
+echo $1 > $file

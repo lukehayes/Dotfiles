@@ -137,6 +137,10 @@ def install_configs():
     folder = "palettes"
     copy_file(folder, config_dir_path + "/aseprite")
 
+    # IMAC LIGHT HELPER SCRIPT
+    #
+    copy_file("scripts/light", "/usr/local/bin")
+
 def nuke_all_configs():
         print("Nuking All Files...\n")
         remove("/home/luke/.config/dotfiles")
@@ -149,6 +153,7 @@ def nuke_all_configs():
         remove("/home/luke/.config/sxhkd")
         remove("/home/luke/.config/polybar")
         remove("/home/luke/.config/rofi")
+        remove("/usr/local/bin/light")
         print("All files removed.\n")
 
 def run_config():
