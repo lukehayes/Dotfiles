@@ -13,14 +13,25 @@ end
 
 -- This is where you actually apply your config choices
 
--- For example, changing the color scheme:
+-- Color Scheme
+--
 --config.color_scheme = 'Dark Violet (base16)'
-config.color_scheme = 'DoomOne'
+config.color_scheme = 'Gruvbox Material (Gogh)'
+
+-- Font
+--
 config.font = wezterm.font ('JetBrainsMono Nerd Font', {weight = 'Medium'})
 config.line_height = 1.1
-
 config.hide_tab_bar_if_only_one_tab = true
 
+-- Window Padding
+--
+config.window_padding = {
+    left   = 10,
+    right  = 0,
+    top    = 10,
+    bottom = 0
+}
 
 -- and finally, return the configuration to wezterm
 return config
